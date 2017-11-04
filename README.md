@@ -17,7 +17,9 @@ Create a droplet:
 
 `ssh-keygen -t rsa`
 
-Password protected with strong password
+(I think I could have done this on the Chromebook with the Termux android app but hey, the Mac was just sitting there.)
+
+When prompted, password protect private key with a strong password.
 
 Copy two files that are output over to Chromebook.  Paste public key into box on Digital Ocean and then create the server.
 
