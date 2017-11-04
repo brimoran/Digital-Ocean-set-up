@@ -1,6 +1,6 @@
 # Digital-Ocean-set-up
 
-How I set up Digital Ocean for R R Studio and Shiny, primarily to see if I could use on a Chromebook but I will probably roll-out to work for others...
+How I set up Digital Ocean for R, R Studio and Shiny, primarily to see if I could use on a Chromebook but I will probably roll-out to work for others...
 
 ## 1. Create Ubuntu server
 
