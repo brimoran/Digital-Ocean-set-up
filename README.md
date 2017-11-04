@@ -167,7 +167,7 @@ Cyberduck works on Mac ok.
 
 To correct navigate to the folder as the user who needs access (example brian):
 
-If currntly root:
+If currently root:
 
 `su brian`
 
