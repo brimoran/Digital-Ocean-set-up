@@ -129,7 +129,7 @@ Check its up and running by accessing at IP address of Droplet (you'll find this
 
 http://DIGITALOCEANDROPLETIPADDRESSHERE:8787/auth-sign-in
 
-Configure sweave settings in Global Options in R to select knitr and XeLaTeX.
+Configure sweave settings in Global Options in RStudio GUI to select knitr and XeLaTeX.
 
 ## 6. Set up shiny server
 
