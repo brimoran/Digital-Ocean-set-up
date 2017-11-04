@@ -187,7 +187,7 @@ To shut down the server from command line (advised to do so on Digital Ocean web
 
 Take a snapshot to save money :) or to share set up.
 
-Cost is only 5 cents per GB per month.  So only c. 10 cents or so to keep per month.
+Cost is only 5 cents per GB per month.  Snapshot size is c. 10 GB so only c. 50 cents or so to keep per month.
 
 And hen to restore...
 
