@@ -174,15 +174,13 @@ For more flexibility to navigate around folders, Cyberduck works on Mac ok.
 
 **Note: When I used Cyberduck, the permissions on uploaded files became borked (maybe because I am doing something wrong... maybe SFTPing as root but accessing R Studio as a normal user)**
 
-To correct navigate to the folder as the user who needs access (example brian):
-
-If currently root:
-
-`su brian`
-
-And then:
+To correct navigate to the folder and then:
 
 `sudo chmod 777 * -R`
+
+Alternatively:
+
+`sudo chmod 777 -R /PATHTOYOURSFTPFOLDER`
 
 All files and sub folders will be corrected.
 
