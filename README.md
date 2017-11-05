@@ -184,6 +184,8 @@ Alternatively:
 
 All files and sub folders will be corrected.
 
+**Be careful with this is gives any user the right to access and delete files which generally you would not want to do.  The -R stands for recursive so it will apply to any sub folders from where the command is run.  Make sure you only run the command on the files you intended to!**
+
 ## 10. General server admin
 
 To get updates in Ubuntu:
