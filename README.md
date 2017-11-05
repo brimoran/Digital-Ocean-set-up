@@ -161,9 +161,12 @@ Make a cup of tea.
 
 ## 8. Test SFTP
 
-Cyberduck works on Mac ok.
+If you just need to access one folder, 
+on Chromebook ‘Add new services’ in the Files app to mount the folder.
 
-**Note: Files seem to become read only after SFTP (maybe because I am doing something wrong... maybe SFTPing as root but in R Studio as brian)**
+For more flexibility to navigate around folders, Cyberduck works on Mac ok.
+
+**Note: When I used Cyberduck, the permissions on uploaded files became borked (maybe because I am doing something wrong... maybe SFTPing as root but accessing R Studio as a normal user)**
 
 To correct navigate to the folder as the user who needs access (example brian):
 
