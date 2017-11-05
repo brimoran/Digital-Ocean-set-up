@@ -23,7 +23,7 @@ When prompted, password protect private key with a strong password.
 
 Copy two files that are output over to Chromebook.  Paste public key into box on Digital Ocean and then create the server.
 
-Login to server using SSH - on Chromebook use Secure Shell app (excellent!) and import private ssh key as part of this.
+Login to server using SSH - on Chromebook use Secure Shell app (excellent!) and import private ssh key as part of this. **Don't forget to `exit` at the end os a session.**
 
 ## 2. Create users
 
@@ -159,7 +159,13 @@ For automated corporate reports in knitr:
 
 Make a cup of tea.
 
-## 8. Test SFTP
+## 8. Install Pandoc
+
+Tobe able to do most of my writing in Markdown but easily share in other formats:
+
+`sudo apt-get install pandoc`
+
+## 9. Test SFTP
 
 If you just need to access one folder, 
 on Chromebook ‘Add new services’ in the Files app to mount the folder using Secure Shell. Just use your existing connection to the server but give the New Connection a new name and don’t forget to add the port as 22.
@@ -180,7 +186,7 @@ And then:
 
 All files and sub folders will be corrected.
 
-## 9. General server admin
+## 10. General server admin
 
 To get updates in Ubuntu:
 
