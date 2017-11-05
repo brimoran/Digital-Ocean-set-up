@@ -23,7 +23,7 @@ When prompted, password protect private key with a strong password.
 
 Copy two files that are output over to Chromebook.  Paste public key into box on Digital Ocean and then create the server.
 
-Login to server using SSH - on Chromebook use Secure Shell app (excellent!) and import private ssh key as part of this.
+Login to server using SSH - on Chromebook use Secure Shell app (excellent!) and import private ssh key as part of this. **Don't forget to `exit` at the end os a session.**
 
 ## 2. Create users
 
