@@ -162,7 +162,7 @@ Make a cup of tea.
 ## 8. Test SFTP
 
 If you just need to access one folder, 
-on Chromebook ‘Add new services’ in the Files app to mount the folder.
+on Chromebook ‘Add new services’ in the Files app to mount the folder using Secure Shell. Just use your existing connection to the server but give the New Connection a new name and don’t forget to add the port as 22.
 
 For more flexibility to navigate around folders, Cyberduck works on Mac ok.
 
