@@ -4,7 +4,7 @@ How I set up Digital Ocean for R, R Studio and Shiny, primarily to see if I coul
 
 ## 1. Create Ubuntu server
 
-Head to https://www.digitalocean.com/ and create and account.
+Head to https://www.digitalocean.com/ and create an account.
 
 Create a droplet:
 
@@ -21,9 +21,9 @@ Create a droplet:
 
 When prompted, password protect private key with a strong password.
 
-Copy two files that are output over to Chromebook.  Paste public key into box on Digital Ocean and then create the server.
+Copy two files that are output over to Chromebook.  Paste public key into box on Digital Ocean and then follow the simple steps on DO to create the server.
 
-Login to server using SSH - on Chromebook use Secure Shell app (excellent!) and import private ssh key as part of this. **Don't forget to `exit` at the end os a session.**
+Login to server using SSH - on Chromebook use Secure Shell app (excellent!) and import private ssh key as part of this. **Don't forget to `exit` at the end of a session.**
 
 ## 2. Create users
 
@@ -125,7 +125,7 @@ create another user for rstudio (if need be):
 
 `sudo adduser rstudio`
 
-Check its up and running by accessing at IP address of Droplet (you'll find this on the dashboard in Digital Ocean) on port 8787:
+Check it’s up and running by accessing at IP address of Droplet (you'll find this on the dashboard in Digital Ocean) on port 8787:
 
 http://DIGITALOCEANDROPLETIPADDRESSHERE:8787/auth-sign-in
 
@@ -161,7 +161,7 @@ Make a cup of tea.
 
 ## 8. Install Pandoc
 
-Tobe able to do most of my writing in Markdown but easily share in other formats:
+To be able to do most of my writing in Markdown but easily share in other formats:
 
 `sudo apt-get install pandoc`
 
@@ -184,7 +184,7 @@ Alternatively:
 
 All files and sub folders will be corrected.
 
-**Be careful with this is gives any user the right to access and delete files which generally you would not want to do.  The -R stands for recursive so it will apply to any sub folders from where the command is run.  Make sure you only run the command on the files you intended to!**
+**Be careful with this, it gives any user the right to access and delete files which generally you would not want to do.  The -R stands for recursive so it will apply to any sub folders from where the command is run.  Make sure you only run the command on the files you intended to!**
 
 ## 10. General server admin
 
@@ -200,7 +200,7 @@ Take a snapshot to save money :) or to share set up.
 
 Cost is only 5 cents per GB per month.  Snapshot size is c. 10 GB so only c. 50 cents or so to keep per month.
 
-And hen to restore...
+And then to restore...
 
 In Digital Ocean:
 
