@@ -198,10 +198,13 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-mosh-on-
 
 For more persistent connections:
 
-`sudo apt-get install python-software-properties
-sudo add-apt-repository ppa:keithw/mosh
-sudo apt-get update
-sudo apt-get install mosh`
+`sudo apt-get install python-software-properties`
+
+`sudo add-apt-repository ppa:keithw/mosh`
+
+`sudo apt-get update`
+
+`sudo apt-get install mosh`
 
 ## 11. General server admin
 
