@@ -192,7 +192,18 @@ All files and sub folders in PATHTOYOURSFTPFOLDER will be given full read / writ
 
 **Be careful with this, it gives ANY user the right to access and delete files which generally you would not want to do.  The -R stands for recursive so it will apply to any sub folders from where the command is run.  Make sure you only run the command on the files you intended to!**
 
-## 10. General server admin
+## 10. Install Mosh (optional)
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-mosh-on-a-vps
+
+For more persistent connections:
+
+`sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:keithw/mosh
+sudo apt-get update
+sudo apt-get install mosh`
+
+## 11. General server admin
 
 To get updates in Ubuntu:
 
