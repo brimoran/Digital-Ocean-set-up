@@ -170,11 +170,17 @@ To be able to do most of my writing in Markdown but easily share in other format
 If you just need to access one folder, 
 on Chromebook ‘Add new services’ in the Files app to mount the folder using Secure Shell. Just use your existing connection to the server but give the New Connection a new name and don’t forget to add the port as 22.
 
-For more flexibility to navigate around folders, Cyberduck works on Mac ok.
+For more flexibility to navigate around folders, Cyberduck works on Mac ok as does FTPManager on iOS.
 
-**Note: When I used Cyberduck, the permissions on uploaded files became borked (maybe because I am doing something wrong... maybe SFTPing as root but accessing R Studio as a normal user)**
+**Note: When I used Cyberduck or FTPManager, the permissions on uploaded files became borked (because I am SFTPing as root but accessing R Studio as a normal user)**
 
 To correct navigate to the folder and then:
+
+Check file ownership and permissions with:
+
+`ls -la`
+
+Change with:
 
 `sudo chmod 777 * -R`
 
@@ -182,9 +188,9 @@ Alternatively:
 
 `sudo chmod 777 -R /PATHTOYOURSFTPFOLDER`
 
-All files and sub folders will be corrected.
+All files and sub folders in PATHTOYOURSFTPFOLDER will be given full read / write access.
 
-**Be careful with this, it gives any user the right to access and delete files which generally you would not want to do.  The -R stands for recursive so it will apply to any sub folders from where the command is run.  Make sure you only run the command on the files you intended to!**
+**Be careful with this, it gives ANY user the right to access and delete files which generally you would not want to do.  The -R stands for recursive so it will apply to any sub folders from where the command is run.  Make sure you only run the command on the files you intended to!**
 
 ## 10. General server admin
 
