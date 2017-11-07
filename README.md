@@ -105,6 +105,8 @@ And repeat for all of these favourite packages:
 
 - rmarkdown
 
+- reshape2
+
 Exit R:
 
 `quit()`
