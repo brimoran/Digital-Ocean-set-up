@@ -113,6 +113,8 @@ And repeat for all of these favourite packages:
 
 - flexdashboard
 
+- highcharter
+
 - arules
 
 Exit R:
