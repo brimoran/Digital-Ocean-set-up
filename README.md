@@ -37,7 +37,11 @@ That's enough as root for now:
 
 `su brian`
 
-## 3. Install R
+## 3. Install stuff that R packages need
+
+`sudo apt-get install curl libcurl4-openssl-dev libxml2-dev`
+
+## 4. Install R
 
 https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-16-04-2
 
@@ -47,7 +51,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-16-0
 
 `sudo apt-get install r-base`
 
-## 4. Install some standard R packages
+## 5. Install some standard R packages
 
 Doing with admin powers so they will be available to all users:
 
@@ -107,11 +111,15 @@ And repeat for all of these favourite packages:
 
 - reshape2
 
+- flexdashboard
+
+- arules
+
 Exit R:
 
 `quit()`
 
-## 5. Install RServer
+## 6. Install RServer
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-rstudio-on-an-ubuntu-cloud-server
 
@@ -133,7 +141,7 @@ http://DIGITALOCEANDROPLETIPADDRESSHERE:8787/auth-sign-in
 
 Configure sweave settings in Global Options in RStudio GUI to select knitr and XeLaTeX.
 
-## 6. Set up shiny server
+## 7. Set up shiny server
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-shiny-server-on-ubuntu-16-04
 
@@ -153,7 +161,7 @@ Test at port 3838:
 
 http://DIGITALOCEANDROPLETIPADDRESSHERE:3838/
 
-## 7. Install LaTeX
+## 8. Install LaTeX
 
 For automated corporate reports in knitr:
 
@@ -161,13 +169,13 @@ For automated corporate reports in knitr:
 
 Make a cup of tea.
 
-## 8. Install Pandoc
+## 9. Install Pandoc
 
 To be able to do most of my writing in Markdown but easily share in other formats:
 
 `sudo apt-get install pandoc`
 
-## 9. Test SFTP
+## 10. Test SFTP
 
 If you just need to access one folder, 
 on Chromebook ‘Add new services’ in the Files app to mount the folder using Secure Shell. Just use your existing connection to the server but give the New Connection a new name and don’t forget to add the port as 22.
@@ -194,7 +202,7 @@ All files and sub folders in PATHTOYOURSFTPFOLDER will be given full read / writ
 
 **Be careful with this, it gives ANY user the right to access and delete files which generally you would not want to do.  The -R stands for recursive so it will apply to any sub folders from where the command is run.  Make sure you only run the command on the files you intended to!**
 
-## 10. Install Mosh (optional)
+## 11. Install Mosh (optional)
 
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-mosh-on-a-vps
 
@@ -208,7 +216,7 @@ For more persistent connections:
 
 `sudo apt-get install mosh`
 
-## 11. General server admin
+## 12. General server admin
 
 To get updates in Ubuntu:
 
