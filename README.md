@@ -39,7 +39,7 @@ That's enough as root for now:
 
 ## 3. Install stuff that R packages need
 
-`sudo apt-get install curl libcurl4-openssl-dev libxml2-dev`
+`sudo apt-get install curl libcurl4-openssl-dev libxml2-dev libssl-dev`
 
 ## 4. Install R
 
