@@ -119,6 +119,8 @@ And repeat for all of these favourite packages:
 
 - devtools
 
+- tidyverse
+
 Exit R:
 
 `quit()`
