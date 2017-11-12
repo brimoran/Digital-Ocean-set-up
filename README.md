@@ -123,7 +123,9 @@ And repeat for all of these favourite packages:
 
 - maptools
 
-- purrr
+- highcharter
+
+- treemap
 
 Exit R:
 
