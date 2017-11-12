@@ -121,6 +121,10 @@ And repeat for all of these favourite packages:
 
 - tidyverse
 
+- maptools
+
+- purrr
+
 Exit R:
 
 `quit()`
