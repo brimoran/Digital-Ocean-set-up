@@ -129,6 +129,8 @@ And repeat for all of these favourite packages:
 
 - networkD3
 
+- visNetwork
+
 Exit R:
 
 `quit()`
