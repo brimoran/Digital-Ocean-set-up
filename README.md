@@ -127,6 +127,8 @@ And repeat for all of these favourite packages:
 
 - treemap
 
+- networkD3
+
 Exit R:
 
 `quit()`
