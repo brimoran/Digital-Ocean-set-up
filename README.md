@@ -131,6 +131,8 @@ And repeat for all of these favourite packages:
 
 - visNetwork
 
+- DiagrammeR
+
 Exit R:
 
 `quit()`
