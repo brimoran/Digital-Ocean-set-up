@@ -39,7 +39,7 @@ That's enough as root for now:
 
 ## 3. Install stuff that R packages need
 
-`sudo apt-get install curl libcurl4-openssl-dev libxml2-dev libssl-dev libgdal1-dev libproj-dev r-cran-rgl`
+`sudo apt-get install curl libcurl4-openssl-dev libxml2-dev libssl-dev libgdal1-dev libproj-dev xorg libx11-dev libglu1-mesa-dev r-cran-rgl`
 
 ## 4. Install R
 
@@ -50,14 +50,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-16-0
 `sudo apt-get update`
 
 `sudo apt-get install r-base`
-
-For RGL to install:
-`sudo apt-get install xorg'
-
-`sudo apt-get install libx11-dev'
-
-`sudo apt-get install libglu1-mesa-dev' 
-
 
 ## 5. Install some standard R packages
 
