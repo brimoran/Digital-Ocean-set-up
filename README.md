@@ -51,6 +51,14 @@ https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-16-0
 
 `sudo apt-get install r-base`
 
+For RGL to install:
+`sudo apt-get install xorg'
+
+`sudo apt-get install libx11-dev'
+
+`sudo apt-get install libglu1-mesa-dev' 
+
+
 ## 5. Install some standard R packages
 
 Doing with admin powers so they will be available to all users:
