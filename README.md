@@ -73,13 +73,7 @@ And repeat for all of these favourite packages:
 
 - plotly
 
-- htmlwidgets
-
 - rstudioapi
-
-- plyr
-
-- dplyr
 
 - ggfortify
 
@@ -93,23 +87,15 @@ And repeat for all of these favourite packages:
 
 - prophet
 
-- shiny
-
 - treemapify
-
-- data.table
 
 - dbscan
 
 - survival
 
-- MASS
-
 - googleVis
 
 - rmarkdown
-
-- reshape2
 
 - flexdashboard
 
@@ -122,8 +108,6 @@ And repeat for all of these favourite packages:
 - tidyverse
 
 - maptools
-
-- highcharter
 
 - treemap
 
