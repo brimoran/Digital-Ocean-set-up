@@ -117,6 +117,8 @@ And repeat for all of these favourite packages:
 
 - DiagrammeR
 
+- DT
+
 Exit R:
 
 `quit()`
