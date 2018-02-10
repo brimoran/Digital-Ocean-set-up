@@ -59,6 +59,12 @@ Doing with admin powers so they will be available to all users:
 
 Now inside R:
 
+Install useful packages... all at once:
+
+`install.packages(c("ggplot2","knitr","ggthemes","scales","ggmap","plotly","rstudioapi","ggfortify","leaflet","leaflet.extras","rgdal","forecast","prophet","treemapify","dbscan","survival","googleVis","rmarkdown","flexdashboard","highcharter","arules","devtools","tidyverse","maptools","treemap","networkD3","visNetwork","DiagrammeR","DT"))`
+
+...Or individually:
+
 `install.packages('ggplot2')`
 
 And repeat for all of these favourite packages: 
