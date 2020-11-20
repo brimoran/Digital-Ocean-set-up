@@ -1,251 +1,132 @@
-# Digital-Ocean-set-up
+pretty much following Pixelbook setup
 
-How I set up Digital Ocean for R, R Studio and Shiny, primarily to see if I could use on a stock Chromebook but I will probably roll-out to work for others...
+# LaTeX
 
-## 1. Create Ubuntu server
+Needs perl so:
 
-Head to https://www.digitalocean.com/ and create an account.
+aptitude install perl perl-doc
 
-Create a droplet:
+Download latest texlive:
 
-- Ubuntu 16.04
-- $10/mo option is fine
-- 1GB/1CPU
-- 30GB disk
+wget "http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz" 
+tar -xzf install-tl-unx.tar.gz
 
-### Generate SSH keys on Mac with:
+cd into directory
+sudo ./install-tl
 
-`ssh-keygen -t rsa`
+press I to install
 
-(I think I could have done this on the Chromebook with the Termux android app but hey, the Mac was just sitting there.)
+Takes hours
 
-When prompted, password protect private key with a strong password.
+Test with
 
-Copy two files that are output over to Chromebook.  Paste public key into box on Digital Ocean and then follow the simple steps on DO to create the server.
+PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
 
-Login to server using SSH - on Chromebook use Secure Shell app (excellent!) and import private ssh key as part of this. **Don't forget to `exit` at the end of a session.**
+and then:
+pdflatex --version
 
-## 2. Create users
+If all ok 
 
-https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04
+vim .bashrc
 
-`adduser brian`
+and add
+PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
+MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man
+INFOPATH=/usr/local/texlive/2019/texmf-dist/doc/info
 
-`usermod -aG sudo brian`
+save and exit
 
-That's enough as root for now:
+# R
 
-`su brian`
+sudo apt-get update
 
-## 3. Install stuff that R packages need
+sudo R
 
-`sudo apt-get install curl libcurl4-openssl-dev libxml2-dev libssl-dev libgdal-dev libproj-dev xorg libx11-dev libglu1-mesa-dev r-cran-rgl`
+install.packages(c("ggplot2","tidyverse","knitr","ggthemes","scales","ggmap","plotly","ggfortify","leaflet","leaflet.extras","rgdal","forecast","treemapify","dbscan","survival","googleVis","rmarkdown","flexdashboard","highcharter","devtools","maptools","mapview","treemap","networkD3","visNetwork","DiagrammeR","DT","ggcorrplot", "Hmisc", "anomalize", "fpp2", "h2o", "sweep", "timetk", "xgboost", "prophet","survminer"), , repo = 'https://mac.R-project.org')
 
-## 4. Install R
+correcting errors
 
-https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-16-04-2
+treemapify fails because it needs ggfittext which isnt available for R version 3.5.2
 
-`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9`
+mapview, Hmisc also not available for this version
 
-`sudo apt-get update`
+also installed rgeos for maptools
 
-`sudo apt-get install r-base`
+prophet required rstan and this required me to first delete the following directory:
 
-## 5. Install some standard R packages
+ /usr/local/lib/R/site-library/00LOCK-rstan
 
-Doing with admin powers so they will be available to all users:
 
-`sudo -i R`
+survminer reequires older versions of some packages
 
-Now inside R:
+packageurl<-"https://cran.r-project.org/src/contrib/Archive/nloptr/nloptr_1.2.1.tar.gz"
+install.packages(packageurl, repos=NULL, type="source")
 
-Install useful packages... all at once:
+packageurl<-"https://cran.r-project.org/src/contrib/Archive/pbkrtest/pbkrtest_0.4-7.tar.gz"
+install.packages(packageurl, repos=NULL, type="source")
 
-`install.packages(c("ggplot2","knitr","ggthemes","scales","ggmap","plotly","rstudioapi","ggfortify","leaflet","leaflet.extras","rgdal","forecast","prophet","treemapify","dbscan","survival","googleVis","rmarkdown","flexdashboard","highcharter","arules","devtools","tidyverse","maptools","treemap","networkD3","visNetwork","DiagrammeR","DT"))`
+packageurl<-"https://cran.r-project.org/src/contrib/Archive/car/car_3.0-2.tar.gz"
+install.packages(packageurl, repos=NULL, type="source")
 
-...Or individually:
+then let's sort the others
 
-`install.packages('ggplot2')`
+for treemapify
+packageurl<-"https://cran.r-project.org/src/contrib/Archive/ggfittext/ggfittext_0.6.0.tar.gz"
+install.packages(packageurl, repos=NULL, type="source")
 
-And repeat for all of these favourite packages: 
+for mapview:
 
-- knitr
+install.packages("satellite")
 
-- ggthemes
+install.packages(c("sf", "svglite", "uuid", "webshot"))
 
-- scales
+packageurl<-"https://cran.r-project.org/src/contrib/Archive/mapview/mapview_2.6.3.tar.gz"
+install.packages(packageurl, repos=NULL, type="source")
 
-- ggmap
+for Hmisc
 
-- plotly
+install.packages("acepack")
 
-- rstudioapi
+packageurl<-"https://cran.r-project.org/src/contrib/Archive/latticeExtra/latticeExtra_0.6-28.tar.gz"
+install.packages(packageurl, repos=NULL, type="source")
 
-- ggfortify
 
-- leaflet
+packageurl<-"https://cran.r-project.org/src/contrib/Archive/Hmisc/Hmisc_4.1-1.tar.gz"
+install.packages(packageurl, repos=NULL, type="source")
 
-- leaflet.extras
+R studio
 
-- rgdal
+sudo apt-get install gdebi-core
+wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.1093-amd64.deb
+sudo gdebi rstudio-server-1.3.1093-amd64.deb
 
-- forecast
+sudo adduser rstudio
 
-- prophet
+# Other
 
-- treemapify
+pandoc (version is ok because this is Debian 10)
 
-- dbscan
+sudo apt-get install pandoc
 
-- survival
+xlsx2csv
+sudo apt-get install xlsx2csv
 
-- googleVis
+sudo apt-get install ghostscript
 
-- rmarkdown
+sudo apt-get install poppler-utils
 
-- flexdashboard
+sudo apt-get install p7zip-full
 
-- highcharter
+sudo apt-get install mosh
 
-- arules
+sudo apt-get install git
 
-- devtools
+su yourname
 
-- tidyverse
+git config --global user.name "John Doe"
+git config --global user.email john.doe@emailprovider.com
 
-- maptools
+ssh-keygen -t rsa -b 4096 -C "john.doe@emailprovider.com"
+cat ~/.ssh/id_rsa.pub
 
-- treemap
-
-- networkD3
-
-- visNetwork
-
-- DiagrammeR
-
-- DT
-
-Exit R:
-
-`quit()`
-
-## 6. Install RServer
-
-https://www.digitalocean.com/community/tutorials/how-to-set-up-rstudio-on-an-ubuntu-cloud-server
-
-https://www.rstudio.com/products/shiny/download-server/
-
-`sudo apt-get install libapparmor1 gdebi-core`
-
-`sudo wget https://download2.rstudio.org/rstudio-server-1.1.383-amd64.deb`
-
-`sudo gdebi rstudio-server-1.1.383-amd64.deb`
-
-create another user for rstudio (if need be):
-
-`sudo adduser rstudio`
-
-Check it’s up and running by accessing at IP address of Droplet (you'll find this on the dashboard in Digital Ocean) on port 8787:
-
-http://DIGITALOCEANDROPLETIPADDRESSHERE:8787/auth-sign-in
-
-Configure sweave settings in Global Options in RStudio GUI to select knitr and XeLaTeX.
-
-## 7. Set up shiny server
-
-https://www.digitalocean.com/community/tutorials/how-to-set-up-shiny-server-on-ubuntu-16-04
-
-https://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/#install-shiny
-
-`sudo wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.5.872-amd64.deb`
-
-`sudo md5sum shiny-server-1.5.5.872-amd64.deb`
-
-`sudo gdebi shiny-server-1.5.5.872-amd64.deb`
-
-Check it's running: `sudo netstat -plunt | grep -i shiny`
-
-Change firewall to allow port 3838: `sudo ufw allow 3838`
-
-Test at port 3838:
-
-http://DIGITALOCEANDROPLETIPADDRESSHERE:3838/
-
-## 8. Install LaTeX
-
-For automated corporate reports in knitr:
-
-`sudo apt-get install texlive-full`
-
-Make a cup of tea.
-
-## 9. Install Pandoc
-
-To be able to do most of my writing in Markdown but easily share in other formats:
-
-`sudo apt-get install pandoc`
-
-## 10. Test SFTP
-
-If you just need to access one folder, 
-on Chromebook ‘Add new services’ in the Files app to mount the folder using Secure Shell. Just use your existing connection to the server but give the New Connection a new name and don’t forget to add the port as 22.
-
-For more flexibility to navigate around folders, Cyberduck works on Mac ok as does FTPManager on iOS.
-
-**Note: When I used Cyberduck or FTPManager, the permissions on uploaded files became borked (because I am SFTPing as root but accessing R Studio as a normal user)**
-
-To correct navigate to the folder and then:
-
-Check file ownership and permissions with:
-
-`ls -la`
-
-Change with:
-
-`sudo chmod 777 * -R`
-
-Alternatively:
-
-`sudo chmod 777 -R /PATHTOYOURSFTPFOLDER`
-
-All files and sub folders in PATHTOYOURSFTPFOLDER will be given full read / write access.
-
-**Be careful with this, it gives ANY user the right to access and delete files which generally you would not want to do.  The -R stands for recursive so it will apply to any sub folders from where the command is run.  Make sure you only run the command on the files you intended to!**
-
-## 11. Install Mosh (optional)
-
-https://www.digitalocean.com/community/tutorials/how-to-install-and-use-mosh-on-a-vps
-
-For more persistent connections:
-
-`sudo apt-get install python-software-properties`
-
-`sudo add-apt-repository ppa:keithw/mosh`
-
-`sudo apt-get update`
-
-`sudo apt-get install mosh`
-
-## 12. General server admin
-
-To get updates in Ubuntu:
-
-`sudo apt-get upgrade`
-
-To shut down the server from command line (advised to do so on Digital Ocean website rather than just pressing the off button):
-
-`sudo shutdown -h now`
-
-Take a snapshot to save money :) or to share set up.
-
-Cost is only 5 cents per GB per month.  Snapshot size is c. 10 GB so only c. 50 cents or so to keep per month.
-
-And then to restore...
-
-In Digital Ocean:
-
-- Navigate to images
-- Click on the more down arrow on the snapshot
-- Select create droplet
-- Remember to tick the box for the ssh key again
-- Takes 30 seconds or so.
+add to git settings 
