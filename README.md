@@ -36,6 +36,12 @@ INFOPATH=/usr/local/texlive/2019/texmf-dist/doc/info
 
 save and exit
 
+so that LaTeX is available to other users on the server
+
+vim /etc/bash.bashrc
+
+and add the same lines
+
 # R
 
 sudo apt-get update
