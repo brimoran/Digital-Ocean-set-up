@@ -1,10 +1,8 @@
-pretty much following Pixelbook setup
-
 # LaTeX
 
 Needs perl so:
 
-aptitude install perl perl-doc
+``aptitude install perl perl-doc``
 
 Download latest texlive:
 
