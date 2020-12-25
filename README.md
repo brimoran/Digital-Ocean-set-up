@@ -115,6 +115,8 @@ for Hmisc:
 
 ``sudo apt-get install mosh``
 
+``sudo apt-get install ncdu``
+
 ## Setting up git
 
 ``sudo apt-get install git``
