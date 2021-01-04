@@ -101,6 +101,12 @@ for Hmisc:
 
 ``sudo adduser rstudio``
 
+# Python stuff
+
+``sudo apt install python3-pip``
+
+``sudo apt-get install python3-pandas``
+
 # Other
 
 ``sudo apt-get install pandoc``
