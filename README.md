@@ -107,6 +107,8 @@ for Hmisc:
 
 ``sudo apt-get install python3-pandas``
 
+``pip3 install boto3``
+
 # Other
 
 ``sudo apt-get install pandoc``
