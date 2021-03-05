@@ -93,6 +93,41 @@ for Hmisc:
 ``packageurl<-"https://cran.r-project.org/src/contrib/Archive/Hmisc/Hmisc_4.1-1.tar.gz"``
 ``install.packages(packageurl, repos=NULL, type="source")``
 
+For ggpmisc:
+
+``packageurl<-"https://cran.r-project.org/src/contrib/Archive/splus2R/splus2R_1.2-2.tar.gz"``
+``install.packages(packageurl, repos=NULL, type="source")``
+
+packageurl<-"https://cran.r-project.org/src/contrib/Archive/ggpmisc/ggpmisc_0.3.4.tar.gz"
+``install.packages(packageurl, repos=NULL, type="source")``
+
+Hmmm having trouble with some maps so let's try to upgrade everything instead...
+
+Back out of R and add:
+
+``deb http://cloud.r-project.org/bin/linux/debian buster-cran40/``
+ 
+ to
+ 
+``/etc/apt/sources.list``
+then
+
+``apt update``
+``apt install -t buster-cran40 r-base``
+
+Then ``sudo R`` again:
+
+``update.packages(lib.loc="/usr/local/lib/R/site-library", ask = FALSE,
+  checkBuilt = TRUE, Ncpus = 16)``
+
+(probably should have selected Ncpus =4)
+
+then had to add
+
+install.packages("mapproj")
+
+... which was the issue all along...
+
 # R studio
 
 ``sudo apt-get install gdebi-core``
