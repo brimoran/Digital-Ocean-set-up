@@ -118,9 +118,9 @@ then
 Then ``sudo R`` again:
 
 ``update.packages(lib.loc="/usr/local/lib/R/site-library", ask = FALSE,
-  checkBuilt = TRUE, Ncpus = 16)``
+  checkBuilt = TRUE, Ncpus = 4)``
 
-(probably should have selected Ncpus =4)
+(4 processors in my case - use htop to see.)
 
 then had to add
 
