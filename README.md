@@ -126,9 +126,9 @@ Then ``sudo R`` again:
 
 then had to add
 
-install.packages("mapproj")
+``install.packages("mapproj")``
 
-... which was the issue all along...
+... which was the issue all along... but at least R is now on version 4.
 
 # R studio
 
