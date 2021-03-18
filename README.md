@@ -103,7 +103,7 @@ For ggpmisc:
 packageurl<-"https://cran.r-project.org/src/contrib/Archive/ggpmisc/ggpmisc_0.3.4.tar.gz"
 ``install.packages(packageurl, repos=NULL, type="source")``
 
-Hmmm having trouble with some maps so let's try to upgrade everything instead...
+**Addendum** Hmmm having trouble with some maps so let's try to upgrade everything instead...
 
 Back out of R and add:
 
@@ -133,7 +133,9 @@ install.packages("mapproj")
 # R studio
 
 ``sudo apt-get install gdebi-core``
+
 ``wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.1093-amd64.deb``
+
 ``sudo gdebi rstudio-server-1.3.1093-amd64.deb``
 
 ``sudo adduser rstudio``
@@ -173,9 +175,11 @@ install.packages("mapproj")
 ``su yourname``
 
 ``git config --global user.name "John Doe"``
+
 ``git config --global user.email john.doe@emailprovider.com``
 
 ``ssh-keygen -t rsa -b 4096 -C "john.doe@emailprovider.com"``
+
 ``cat ~/.ssh/id_rsa.pub``
 
 add to git settings in web git service.
