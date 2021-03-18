@@ -160,6 +160,10 @@ install.packages("mapproj")
 
 ``sudo apt-get install ncdu``
 
+``sudo apt install neofetch``
+
+``sudo apt install htop``
+
 ## Setting up git
 
 ``sudo apt-get install git``
