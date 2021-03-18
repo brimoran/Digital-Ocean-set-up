@@ -31,9 +31,11 @@ If all ok make the path permanent with:
 
 and add:
 
-``PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
-MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man
-INFOPATH=/usr/local/texlive/2019/texmf-dist/doc/info``
+``PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH``
+
+``MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man``
+
+``INFOPATH=/usr/local/texlive/2019/texmf-dist/doc/info``
 
 Save and exit Vim.
 
