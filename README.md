@@ -148,6 +148,8 @@ then had to add
 
 ``pip3 install boto3``
 
+``pip3 install msoffcrypto-tool``
+
 # Other
 
 ``sudo apt-get install pandoc``
