@@ -156,6 +156,14 @@ The reason for the update was to install IMD.  But while we are at it there are 
 
 ``sudo adduser rstudio``
 
+Since update to R Studio 4.1, an update to R Studio is required:
+
+``sudo apt-get install gdebi-core``
+
+``wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2021.09.2-382-amd64.deb``
+
+``sudo gdebi rstudio-server-2021.09.2-382-amd64.deb``
+
 # Python stuff
 
 ``sudo apt install python3-pip``
