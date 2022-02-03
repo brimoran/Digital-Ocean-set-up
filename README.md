@@ -136,6 +136,16 @@ Subsequently to update to 4.1 a key is now required: http://cloud.r-project.org/
 
 ``apt-key adv --keyserver keyserver.ubuntu.com --recv-key '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7'``
 
+Then:
+
+``apt update``
+
+``sudo apt upgrade``
+
+The reason for the update was to install IMD.  But while we are at it there are a few additional packages I've added since the initial install:
+
+``install.packages(c("formattable", "IMD", "car"))``
+
 # R studio
 
 ``sudo apt-get install gdebi-core``
