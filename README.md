@@ -130,6 +130,12 @@ then had to add
 
 ... which was the issue all along... but at least R is now on version 4.
 
+
+**Note** 
+Subsequently to update to 4.1 a key is now required: http://cloud.r-project.org/bin/linux/debian/:
+
+``apt-key adv --keyserver keyserver.ubuntu.com --recv-key '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7'``
+
 # R studio
 
 ``sudo apt-get install gdebi-core``
