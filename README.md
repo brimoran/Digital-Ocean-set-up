@@ -211,3 +211,33 @@ Since update to R Studio 4.1, an update to R Studio is required:
 ``cat ~/.ssh/id_rsa.pub``
 
 add to git settings in web git service.
+
+## Overleaf
+
+Full instructions are here: https://github.com/overleaf/toolkit/blob/master/doc/quick-start-guide.md
+
+In brief:
+
+``sudo apt-get install docker``
+
+``sudo apt-get install docker-compose``
+
+``git clone https://github.com/overleaf/toolkit.git ./overleaf``
+
+``cd overleaf``
+
+``bin/init``
+
+``vim config/overleaf.rc`` and replace IP address for SHARELATEX_LISTEN to:
+
+``SHARELATEX_LISTEN_IP=0.0.0.0``
+
+bin/up and create admin account by visiting http://your-ip-here/launchpad
+
+exit session and gracefully end Overleaf server with Ctrl-C.
+
+Then to run an unattached session:
+
+``bin/start``
+
+(end with ``bin/stop``)
