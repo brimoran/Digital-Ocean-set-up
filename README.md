@@ -228,7 +228,7 @@ In brief:
 
 ``bin/init``
 
-``vim config/overleaf.rc`` and replace IP address for SHARELATEX_LISTEN to:
+``vim config/overleaf.rc`` and to enable direct access to Overleaf from your server's IP address change the IP address for SHARELATEX_LISTEN to:
 
 ``SHARELATEX_LISTEN_IP=0.0.0.0``
 
