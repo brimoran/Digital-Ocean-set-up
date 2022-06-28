@@ -241,3 +241,17 @@ Then to run an unattached session:
 ``bin/start``
 
 (end with ``bin/stop``)
+
+Chances are a more complete LaTeX installation will be needed, so following https://blog.felixviola.de/overleaf-ce-setup-your-own-latex-server-tutorial/:
+
+``bin/shell``
+
+``wget https://mirror.clientvps.com/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz``
+
+``tar -xf install-tl-unx.tar.gz``
+
+``cd install-tl-*``
+
+``perl install-tl``
+
+Reject using previous config and then press i for full install, which as usual will take a LONG time.
