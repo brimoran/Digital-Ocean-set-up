@@ -255,3 +255,5 @@ Chances are a more complete LaTeX installation will be needed, so following http
 ``perl install-tl``
 
 Reject using previous config and then press i for full install, which as usual will take a LONG time.
+
+Then exit out of the shell, stop and then start overleaf for good measure.
