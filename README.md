@@ -196,6 +196,8 @@ Since update to R Studio 4.1, an update to R Studio is required:
 
 ``sudo apt install rename``
 
+``sudo apt install parallel``
+
 ## Setting up git
 
 ``sudo apt-get install git``
